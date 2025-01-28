@@ -96,14 +96,14 @@ export default async function DashboardLayout({
 										variant='secondary'
 										className='rounded-full p-0 border-none h-[37px]'
 									>
-										<User className='rounded-full' size={10}/>
-										{/* <Image
-											src={User}
+										{/* <User className='rounded-full' width={10} height={10}/> */}
+										<Image
+											src={`${session.user?.image}`}
 											width={12}
 											height={12}
 											alt='user'
 											className='m-0 p-0 h-full w-full rounded-full '
-										/> */}
+										/>
 									</Button>
 								</DropdownMenuTrigger>
 								<DropdownMenuContent align='end'>
