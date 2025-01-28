@@ -5,11 +5,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import {useForm} from '@conform-to/react'
 import { onboardingSchemaLocale } from '@/lib/zodSchema'
 import { parseWithZod } from '@conform-to/zod'
 import { SubmitButton } from '../components/SubmitButtons'
+import { requireUser } from '@/lib/hooks'
+import { userEmail } from './userEmail'
 
 export default function OnboardingRoute(){
 	const [lastResult, action] = useActionState(OnboardingAction, undefined)
@@ -27,6 +29,10 @@ export default function OnboardingRoute(){
     shouldValidate: "onBlur",
     shouldRevalidate: "onInput",
   });
+
+
+
+	
 
 
 	return (
@@ -48,9 +54,7 @@ export default function OnboardingRoute(){
 					<div className='grid gap-y-2'>
 						<Label>Username</Label>
 						<div className='flex rounded-md'>
-							<span className='inline-flex items-center px-3 rounded-l-md border border-r-0 border-muted bg-muted text-sm text-muted-foreground'>
-								aragas1245@gmail.com
-							</span>
+							
 							<Input placeholder='ex1' className='rounded-l-none' name={fields.userName.name} key={fields.userName.key} defaultValue={fields.userName.initialValue}/>
 						</div>
 						<p className='text-red-500 text-sm'>{fields.userName.errors}</p>
