@@ -5,7 +5,7 @@ import Logo from '@/public/logo.png'
 import { DashboardLinks } from '../components/DashboardLinks'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
-import { Menu } from 'lucide-react'
+import { Menu, User } from 'lucide-react'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 	DropdownMenuSeparator,
@@ -96,13 +96,14 @@ export default async function DashboardLayout({
 										variant='secondary'
 										className='rounded-full p-0 border-none h-[37px]'
 									>
-										<Image
-											src={`${session!.user!.image}`}
+										<User className='rounded-full' size={10}/>
+										{/* <Image
+											src={User}
 											width={12}
 											height={12}
 											alt='user'
 											className='m-0 p-0 h-full w-full rounded-full '
-										/>
+										/> */}
 									</Button>
 								</DropdownMenuTrigger>
 								<DropdownMenuContent align='end'>

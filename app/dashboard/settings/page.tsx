@@ -30,7 +30,8 @@ const SettingsPage = async () => {
     <SettingsForm
       fullName={data.name as string}
       email={data.email}
-      //profileImage={data.image as string}
+      
+     // profileImage={data.image as string}
     />
   );
 };

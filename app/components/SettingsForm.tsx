@@ -28,7 +28,7 @@ import { toast } from "sonner";
 interface iAppProps {
 	fullName: string,
 	email:string,
-	//profileImage: string,
+//	profileImage: string,
 }
 
 export default function SettingsForm({fullName, email} : iAppProps){
