@@ -28,12 +28,12 @@ import { toast } from "sonner";
 interface iAppProps {
 	fullName: string,
 	email:string,
-	profileImage: string,
+	//profileImage: string,
 }
 
-export default function SettingsForm({fullName, email, profileImage} : iAppProps){
+export default function SettingsForm({fullName, email} : iAppProps){
 		const [lastResult, action] = useActionState(SettingsAction, undefined);
-  const [currentProfileImage, setCurrentProfileImage] = useState(profileImage);
+  //const [currentProfileImage, setCurrentProfileImage] = useState(profileImage);
 
   const [form, fields] = useForm({
     // Sync the result of last submission
@@ -49,9 +49,9 @@ export default function SettingsForm({fullName, email, profileImage} : iAppProps
     shouldRevalidate: "onInput",
   });
 
-  const handleDeleteImage = () => {
-    setCurrentProfileImage("");
-  };
+  // const handleDeleteImage = () => {
+  //   setCurrentProfileImage("");
+  // };
 
 
 	return (
@@ -77,12 +77,12 @@ export default function SettingsForm({fullName, email, profileImage} : iAppProps
 					<Input disabled placeholder="idonotknowwhattoputhere69@gmail.com" defaultValue={email} />
 				</div>
 
-				<div className="grid gap-y-5">
+				{/* <div className="grid gap-y-5">
 					<input
 						type="hidden"
 						name={fields.profileImage.name}
 						key={fields.profileImage.key}
-						value={currentProfileImage}
+						//value={currentProfileImage}
 					/>
 					<Label>Profile Image</Label>
 					{currentProfileImage ? (
@@ -120,7 +120,7 @@ export default function SettingsForm({fullName, email, profileImage} : iAppProps
 						/>
 					)}
 					<p className="text-red-500 text-sm">{fields.profileImage.errors}</p>
-				</div>
+				</div> */}
 			</CardContent>
 			<CardFooter>
 				<SubmitButton text="Save Changes" />
