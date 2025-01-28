@@ -1,6 +1,6 @@
-import { Poppins } from '@next/font/google'
+//import { Poppins } from '@next/font/google'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Poppins } from 'next/font/google'
 import { ThemeProvider } from './components/ThemeProvider'
 import './globals.css'
 
@@ -22,7 +22,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: 'Calendaire',
 	description: 'Scheduling made easy',
-	
 }
 
 export default function RootLayout({

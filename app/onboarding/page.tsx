@@ -11,7 +11,7 @@ import { onboardingSchemaLocale } from '@/lib/zodSchema'
 import { parseWithZod } from '@conform-to/zod'
 import { SubmitButton } from '../components/SubmitButtons'
 import { requireUser } from '@/lib/hooks'
-import { userEmail } from './userEmail'
+
 
 export default function OnboardingRoute(){
 	const [lastResult, action] = useActionState(OnboardingAction, undefined)
